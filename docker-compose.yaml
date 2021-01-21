@@ -9,6 +9,6 @@ services:
       - "8081:8080"
     volumes:
       # Mounting the config file
-      - traefik-config.toml:/etc/traefik/traefik.toml
+      - ./traefik-config.toml:/etc/traefik/traefik.toml
 
 
