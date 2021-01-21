@@ -3,6 +3,7 @@ services:
   traefik:
     image: traefik:2.2
     command: traefik
+    network_mode: host
     ports:
       # The HTTP port and dashboard
       - "80:80"

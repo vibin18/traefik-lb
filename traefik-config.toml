@@ -7,7 +7,8 @@
 [api]
   insecure = true
   dashboard = true
-
+[log]
+  level = "DEBUG"
 [frontends]
   [frontends.frontend1]
   backend = "backend1"
