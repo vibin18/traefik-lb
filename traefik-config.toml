@@ -11,19 +11,20 @@
 [file]
 
 [backends]
-
   [backends.backend1]
-
     [backends.backend1.servers]
       [backends.backend1.servers.server0]
         url = "http://192.168.178.71:30954/"
         weight = 1
+      [backends.backend1.servers.server1]
+        url = "http://192.168.178.73:30954/"
+        weight = 2
+    [backends.backend1.loadBalancer]
+      method = "drr"
 
 
 [frontends]
-
   [frontends.frontend1]
     entryPoints = ["http"]
     backend = "backend1"
     passHostHeader = true
-    priority = 42
