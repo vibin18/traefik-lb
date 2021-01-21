@@ -9,6 +9,7 @@
   dashboard = true
 [log]
   level = "DEBUG"
+[accessLog]
 [frontends]
   [frontends.frontend1]
   backend = "backend1"
