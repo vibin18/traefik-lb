@@ -8,7 +8,13 @@
   insecure = true
   dashboard = true
 
-[file]
+[frontends]
+  [frontends.frontend1]
+  backend = "backend1"
+  entryPoints = ["http"]
+  passHostHeader = true
+    [frontends.frontend1.routes.test_1]
+    rule = "Host:localhost,192.168.178.71"
 
 [backends]
   [backends.backend1]
@@ -21,10 +27,3 @@
         weight = 2
     [backends.backend1.loadBalancer]
       method = "drr"
-
-
-[frontends]
-  [frontends.frontend1]
-    entryPoints = ["http"]
-    backend = "backend1"
-    passHostHeader = true
