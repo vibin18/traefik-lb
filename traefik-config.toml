@@ -1,9 +1,11 @@
-global:
-  checkNewVersion: true
-  sendAnonymousUsage: true
-entryPoints:
-  web:
-    address: :80
-api:
-  insecure: true
-  dashboard: true
+[global]
+  checkNewVersion = true
+  sendAnonymousUsage = true
+[entryPoints]
+  [entryPoints.web]
+    address = ":80"
+  [entryPoints.websecure]
+    address = ":443"
+[api]
+  insecure = true
+  dashboard = true
