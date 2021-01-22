@@ -2,7 +2,7 @@
   [http.routers]
     [http.routers.Router-1]
       entryPoints = ["http"]
-      rule = "Host(`192.168.178.71`)"
+      rule = "(Host(`192.168.178.71`)|| PathPrefix(`/`))"
       service = "service-1"
 
   [http.services]
