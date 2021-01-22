@@ -16,4 +16,4 @@
 
 [providers]
   [providers.file]
-    filename = /etc/traefik/provider.toml
+    filename = "/etc/traefik/provider.toml"
