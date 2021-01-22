@@ -1,0 +1,14 @@
+[http]
+  [http.routers]
+    [http.routers.Router-1]
+      entryPoints = ["http"]
+      rule = "Host(`192.168.178.71`)"
+      service = "service-1"
+
+  [http.services]
+    [http.services.service-1.loadBalancer]
+
+      [[http.services.service-1.loadBalancer.servers]]
+        url = "http://192.168.178.71:30954/"
+      [[http.services.service-1.loadBalancer.servers]]
+        url = "http://192.168.178.73:30954/"

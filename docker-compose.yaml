@@ -10,5 +10,6 @@ services:
     volumes:
       # Mounting the config file
       - ./traefik-config.toml:/etc/traefik/traefik.toml
+      - ./provider.toml:/etc/traefik/provider.toml
 
 
