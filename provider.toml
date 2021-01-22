@@ -1,9 +1,8 @@
-[tcp]
-  [tcp.routers]
-    [tcp.routers.to-database]
+[http]
+  [http.routers]
+    [http.routers.Router-1]
       entryPoints = ["http"]
-      # Catch every request (only available rule for non-tls routers. See below.)
-      rule = "HostSNI(`*`)"
+      rule = "Host(`192.168.178.71`)"
       service = "service-1"
 
   [http.services]
