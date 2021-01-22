@@ -13,3 +13,7 @@
 [entryPoints]
   [entryPoints.http]
     address = ":80"
+
+[providers]
+  [providers.file]
+    filename = /etc/traefik/provider.toml
